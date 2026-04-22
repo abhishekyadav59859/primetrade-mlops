@@ -1,0 +1,120 @@
+2026-04-21T08:59:02 [INFO] ============================================================
+2026-04-21T08:59:02 [INFO] MLOps Pipeline â€” Job started
+2026-04-21T08:59:02 [INFO] Input:    data.csv
+2026-04-21T08:59:02 [INFO] Config:   config.yaml
+2026-04-21T08:59:02 [INFO] Output:   metrics.json
+2026-04-21T08:59:02 [INFO] Log file: run.log
+2026-04-21T08:59:02 [INFO] ============================================================
+2026-04-21T08:59:02 [INFO] Loading config from: config.yaml
+2026-04-21T08:59:02 [INFO] Config validated â€” seed=42, window=5, version=v1
+2026-04-21T08:59:02 [INFO] Random seed set: numpy.random.seed(42)
+2026-04-21T08:59:02 [INFO] Loading dataset from: data.csv
+2026-04-21T08:59:02 [INFO] Dataset loaded â€” 10000 rows, columns: ['open', 'high', 'low', 'close', 'volume']
+2026-04-21T08:59:02 [INFO] Computing rolling mean on 'close' with window=5
+2026-04-21T08:59:02 [INFO] Rolling mean computed â€” 4 NaN rows (first 4 rows excluded from signal computation)
+2026-04-21T08:59:02 [INFO] Generating binary signal: signal=1 if close > rolling_mean, else 0
+2026-04-21T08:59:02 [INFO] Signal generation complete â€” 9996 valid rows, signal_rate=0.4991
+2026-04-21T08:59:02 [INFO] Metrics written to: metrics.json
+2026-04-21T08:59:02 [INFO] Metrics summary: {"version": "v1", "rows_processed": 10000, "metric": "signal_rate", "value": 0.4991, "latency_ms": 46, "seed": 42, "status": "success"}
+2026-04-21T08:59:02 [INFO] Job completed successfully
+2026-04-21T08:59:02 [INFO] ============================================================
+2026-04-21T23:07:09 [INFO] ============================================================
+2026-04-21T23:07:09 [INFO] MLOps Pipeline — Job started
+2026-04-21T23:07:09 [INFO] Input:    data.csv
+2026-04-21T23:07:09 [INFO] Config:   config.yaml
+2026-04-21T23:07:09 [INFO] Output:   metrics.json
+2026-04-21T23:07:09 [INFO] Log file: run.log
+2026-04-21T23:07:09 [INFO] ============================================================
+2026-04-21T23:07:09 [INFO] Loading config from: config.yaml
+2026-04-21T23:07:09 [INFO] Config validated — seed=42, window=5, version=v1
+2026-04-21T23:07:09 [INFO] Random seed set: numpy.random.seed(42)
+2026-04-21T23:07:09 [INFO] Loading dataset from: data.csv
+2026-04-21T23:07:09 [INFO] Dataset loaded — 10000 rows, columns: ['open', 'high', 'low', 'close', 'volume']
+2026-04-21T23:07:09 [INFO] Computing rolling mean on 'close' with window=5
+2026-04-21T23:07:09 [INFO] Rolling mean computed — 4 NaN rows (first 4 rows excluded from signal computation)
+2026-04-21T23:07:09 [INFO] Generating binary signal: signal=1 if close > rolling_mean, else 0
+2026-04-21T23:07:09 [INFO] Signal generation complete — 9996 valid rows, signal_rate=0.4991
+2026-04-21T23:07:09 [INFO] Metrics written to: metrics.json
+2026-04-21T23:07:09 [INFO] Metrics summary: {"version": "v1", "rows_processed": 10000, "metric": "signal_rate", "value": 0.4991, "latency_ms": 52, "seed": 42, "status": "success"}
+2026-04-21T23:07:09 [INFO] Job completed successfully
+2026-04-21T23:07:09 [INFO] ============================================================
+2026-04-21T23:36:14 [INFO] ============================================================
+2026-04-21T23:36:14 [INFO] MLOps Pipeline — Job started
+2026-04-21T23:36:14 [INFO] Input:    data.csv
+2026-04-21T23:36:14 [INFO] Config:   config.yaml
+2026-04-21T23:36:14 [INFO] Output:   metrics.json
+2026-04-21T23:36:14 [INFO] Log file: run.log
+2026-04-21T23:36:14 [INFO] ============================================================
+2026-04-21T23:36:14 [INFO] Loading config from: config.yaml
+2026-04-21T23:36:14 [INFO] Config validated — seed=42, window=5, version=v1
+2026-04-21T23:36:14 [INFO] Random seed set: numpy.random.seed(42)
+2026-04-21T23:36:14 [INFO] Loading dataset from: data.csv
+2026-04-21T23:36:14 [ERROR] Pipeline failed: Required column 'close' not found. Available columns: ['timestamp,open,high,low,close,volume_btc,volume_usd']
+Traceback (most recent call last):
+  File "C:\Users\abhis\Downloads\primetrade-mlops\primetrade-mlops\run.py", line 160, in main
+    df = load_dataset(args.input, logger)
+  File "C:\Users\abhis\Downloads\primetrade-mlops\primetrade-mlops\run.py", line 85, in load_dataset
+    raise ValueError(
+ValueError: Required column 'close' not found. Available columns: ['timestamp,open,high,low,close,volume_btc,volume_usd']
+2026-04-21T23:36:14 [INFO] ============================================================
+2026-04-21T23:36:14 [INFO] Error metrics written to: metrics.json
+2026-04-21T23:37:26 [INFO] ============================================================
+2026-04-21T23:37:26 [INFO] MLOps Pipeline — Job started
+2026-04-21T23:37:26 [INFO] Input:    data.csv
+2026-04-21T23:37:26 [INFO] Config:   config.yaml
+2026-04-21T23:37:26 [INFO] Output:   metrics.json
+2026-04-21T23:37:26 [INFO] Log file: run.log
+2026-04-21T23:37:26 [INFO] ============================================================
+2026-04-21T23:37:26 [INFO] Loading config from: config.yaml
+2026-04-21T23:37:26 [INFO] Config validated — seed=42, window=5, version=v1
+2026-04-21T23:37:26 [INFO] Random seed set: numpy.random.seed(42)
+2026-04-21T23:37:26 [INFO] Loading dataset from: data.csv
+2026-04-21T23:37:26 [ERROR] Pipeline failed: Required column 'close' not found. Available columns: ['timestamp,open,high,low,close,volume_btc,volume_usd']
+Traceback (most recent call last):
+  File "C:\Users\abhis\Downloads\primetrade-mlops\primetrade-mlops\run.py", line 160, in main
+    df = load_dataset(args.input, logger)
+  File "C:\Users\abhis\Downloads\primetrade-mlops\primetrade-mlops\run.py", line 85, in load_dataset
+    raise ValueError(
+ValueError: Required column 'close' not found. Available columns: ['timestamp,open,high,low,close,volume_btc,volume_usd']
+2026-04-21T23:37:26 [INFO] ============================================================
+2026-04-21T23:37:26 [INFO] Error metrics written to: metrics.json
+2026-04-21T23:46:41 [INFO] ============================================================
+2026-04-21T23:46:41 [INFO] MLOps Pipeline — Job started
+2026-04-21T23:46:41 [INFO] Input:    data.csv
+2026-04-21T23:46:41 [INFO] Config:   config.yaml
+2026-04-21T23:46:41 [INFO] Output:   metrics.json
+2026-04-21T23:46:41 [INFO] Log file: run.log
+2026-04-21T23:46:41 [INFO] ============================================================
+2026-04-21T23:46:41 [INFO] Loading config from: config.yaml
+2026-04-21T23:46:41 [INFO] Config validated — seed=42, window=5, version=v1
+2026-04-21T23:46:41 [INFO] Random seed set: numpy.random.seed(42)
+2026-04-21T23:46:41 [INFO] Loading dataset from: data.csv
+2026-04-21T23:46:41 [INFO] Dataset loaded — 10000 rows, columns: ['timestamp', 'open', 'high', 'low', 'close', 'volume_btc', 'volume_usd']
+2026-04-21T23:46:41 [INFO] Computing rolling mean on 'close' with window=5
+2026-04-21T23:46:41 [INFO] Rolling mean computed — 4 NaN rows (first 4 rows excluded from signal computation)
+2026-04-21T23:46:41 [INFO] Generating binary signal: signal=1 if close > rolling_mean, else 0
+2026-04-21T23:46:41 [INFO] Signal generation complete — 9996 valid rows, signal_rate=0.4991
+2026-04-21T23:46:41 [INFO] Metrics written to: metrics.json
+2026-04-21T23:46:41 [INFO] Metrics summary: {"version": "v1", "rows_processed": 10000, "metric": "signal_rate", "value": 0.4991, "latency_ms": 97, "seed": 42, "status": "success"}
+2026-04-21T23:46:41 [INFO] Job completed successfully
+2026-04-21T23:46:41 [INFO] ============================================================
+2026-04-21T23:48:07 [INFO] ============================================================
+2026-04-21T23:48:07 [INFO] MLOps Pipeline — Job started
+2026-04-21T23:48:07 [INFO] Input:    data.csv
+2026-04-21T23:48:07 [INFO] Config:   config.yaml
+2026-04-21T23:48:07 [INFO] Output:   metrics.json
+2026-04-21T23:48:07 [INFO] Log file: run.log
+2026-04-21T23:48:07 [INFO] ============================================================
+2026-04-21T23:48:07 [INFO] Loading config from: config.yaml
+2026-04-21T23:48:07 [INFO] Config validated — seed=42, window=5, version=v1
+2026-04-21T23:48:07 [INFO] Random seed set: numpy.random.seed(42)
+2026-04-21T23:48:07 [INFO] Loading dataset from: data.csv
+2026-04-21T23:48:08 [INFO] Dataset loaded — 10000 rows, columns: ['timestamp', 'open', 'high', 'low', 'close', 'volume_btc', 'volume_usd']
+2026-04-21T23:48:08 [INFO] Computing rolling mean on 'close' with window=5
+2026-04-21T23:48:08 [INFO] Rolling mean computed — 4 NaN rows (first 4 rows excluded from signal computation)
+2026-04-21T23:48:08 [INFO] Generating binary signal: signal=1 if close > rolling_mean, else 0
+2026-04-21T23:48:08 [INFO] Signal generation complete — 9996 valid rows, signal_rate=0.4991
+2026-04-21T23:48:08 [INFO] Metrics written to: metrics.json
+2026-04-21T23:48:08 [INFO] Metrics summary: {"version": "v1", "rows_processed": 10000, "metric": "signal_rate", "value": 0.4991, "latency_ms": 88, "seed": 42, "status": "success"}
+2026-04-21T23:48:08 [INFO] Job completed successfully
+2026-04-21T23:48:08 [INFO] ============================================================
